@@ -1,0 +1,126 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GoVagas - LandingPage</title>
+    <link rel="icon" href="https://govagas.com.br/bundles/wnvagas/site/img/icons/favicon.png"/>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+
+    @* NAVBAR DA PAGE *@
+    <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-primary2">
+        <div class="container">
+            @*@Html.ActionLink("GoVagas", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })*@
+            <nav class="">
+                <div class="container-fluid navbar navbar-light">
+                    <a class="navbar-brand" href="http://localhost:60859/Home">
+                        <img src="https://govagas.com.br/bundles/wnvagas/site/img/logo_orange.png" alt="" width="170" height="24" class="d-inline-block align-text-top">
+                    </a>
+                </div>
+            </nav>
+            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" title="Alternar a navegação" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse d-sm-inline-flex justify-content-end sticky-bottom">
+                <ul class="navbar-nav ms-auto">
+                    <li class="btn-nav">@Html.ActionLink("Página Inicial", "Index", "Home", new { area = "" }, new { @class = "nav-link" })</li>
+                    <li class="btn-nav">@Html.ActionLink("Sobre", "About", "Home", new { area = "" }, new { @class = "nav-link" })</li>
+                    <li class="btn-nav">@Html.ActionLink("Contato", "Contact", "Home", new { area = "" }, new { @class = "nav-link" })</li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    @* PARTE LARANJA DA NAVBAR *@
+    <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-primary1">
+        <div class="container">
+        </div>
+    </nav>
+
+    @* RENDERIZAÇÃO DO BODY *@
+    <div class="container body-content">
+        @RenderBody()
+    </div>
+
+    @* FOOTER DA PAGE *@
+    <section>
+        <hr />
+        <footer class="text-center text-white">
+            <div class="rodape">
+                <div class="card-rodape ">
+                    <div class="card1">
+                        <h2 class="tit-card">Não perca mais tempo e esforço com processos seletivos ineficientes. <br />Adquira agora a nossa ferramenta de recrutamento e seleção e otimize seus processos para encontrar os melhores candidatos para sua empresa.</h2>
+                        <p><a href="#" class="btn btn-light btn-md btn-hire3 btn-hire-color text-center">CONTRATE AGORA</a></p>
+                    </div>
+                </div>
+            </div>
+            <!-- Copyright -->
+            <div class="text-center p-2 text-white-50" style="background-color: #212529;">
+                © 2020 Copyright:
+                <a class="text-white-50" href="https://govagas.com.br/para-empresas">govagas.com.br/para-empresas</a>
+            </div>
+            <!-- Copyright -->
+        </footer>
+    </section>
+    
+    <style>
+        .bg-primary1 {
+            background-color: #F15A2A;
+        }
+
+        .bg-primary2 {
+            background-color: #212529;
+        }
+
+        .btn-nav {
+            margin-right: 20px;
+        }
+
+        .btn-nav :hover {
+            background-color: #F15A2A;
+            
+        }
+        .rodape {
+            height: 22.7vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #F15A2A;
+        }
+        .card-rodape {
+            height: 85%;
+            width: 85%;
+            background-color: #212529;
+            border-radius: 30vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .card1 {
+            margin-top: 6vw;
+            width: 90%;
+            height: 100%;
+        }
+        .tit-card{
+            margin-bottom: 1vw;
+            font-size:2.1vw;
+        }
+        .btn-hire3 {
+            font-size: 2vw;
+            font-weight: bold;
+            color: #212529;
+            padding: -20px;
+        }
+    </style>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
